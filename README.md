@@ -5,7 +5,7 @@ This project required building a Node.js command-line application that takes in 
 When prompted for team members and their information, then an HTML is generated that displays a nicely formatted team roster based on user input.
 
 # Table of content
-* [Go to Installation section](#Installation)
+* [Installation](#Installation)
 * Usage
 * License
 * Contributing
