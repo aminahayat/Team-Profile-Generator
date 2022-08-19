@@ -3,6 +3,7 @@
     --bg-color: #ffffff;
     --secound-bg-color: #191919;
     --text-color: rgb(0, 0, 0);
+    --main-text: rgb(240, 144, 160); 
 }
 
 body{
@@ -18,5 +19,12 @@ body{
 h1{
     text-align: center;
     background-color: var(--bg-color); 
-    
+    color: var(--main-text);
+    font-size: 50px;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--main-text);
 }
