@@ -44,3 +44,106 @@ function promptManager() {
       menu();
     });
     }
+
+    function menu() {
+        inquirer
+        .prompt([
+          {
+            type: "list",
+            name: "mainMenu",
+            message: "What would you like to do next?",
+            choices: ["Engineer", "Intern", "Build Team"],
+          },
+        ])
+        .then((answers) => {
+          switch (answers.mainMenu) {
+            case "Engineer":
+              promptEngineer();
+              break;
+            case "Intern":
+              promptIntern();
+              break;
+            default:
+              buildTeam();
+          }
+        });
+        }
+        
+        promptManager();
+        
+        function promptEngineer(){
+        inquirer.prompt([
+        {
+                type: "input",
+                name: "engineerName",
+                message: "Hi engineer, what is your name?",
+              },
+              {
+                type: "input",
+                name: "engineerId",
+                message: "Enter your ID number",
+              },
+              {
+                type: "input",
+                name: "engineerEmail",
+                message: "Enter your email address",
+              },
+              {
+                type: "input",
+                name: "engineerGithub",
+                message: "What is your github username?",
+              },
+        ]).then((answers)=>{
+        const engineer= new Engineer(
+          answers.engineerName,
+          answers.engineerId,
+          answers.engineerEmail,
+          answers.engineerGithub
+        )
+        members.push(engineer)
+        menu();
+        })
+        
+        }
+        
+        function promptIntern(){
+        inquirer.prompt([
+         {
+          type: "input",
+          name: "internName",
+          message: "Hi intern, what is your name?",
+        },
+        {
+          type: "input",
+          name: "internId",
+          message: "Enter your ID number",
+        },
+        {
+          type: "input",
+          name: "internEmail",
+          message: "Enter your email address",
+        },
+        {
+          type: "input",
+          name: "internSchool",
+          message: "What school did you study at?",
+        },
+        
+        ]).then((answers)=>{
+         const intern= new Intern(
+           answers.internName,
+           answers.internId,
+           answers.internEmail,
+           answers.internSchool
+         )
+         members.push(intern)
+         menu();
+        })
+        }
+        
+        function buildTeam(){
+        
+        fs.writeFileSync("./develop/index.html", renderhtml(members),(err)=>{
+          if(err) throw err;
+        })
+        }
