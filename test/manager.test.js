@@ -1,4 +1,4 @@
-const Manager = require("../lib/manager")
+const Manager = Require("../lib/manager")
 
 describe("Creates a Manager", () => {
     it ("Manager name should get printed", () => {

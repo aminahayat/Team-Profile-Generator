@@ -1,4 +1,4 @@
-const Employee = require ('../lib/employee')
+const Employee = Require ('../lib/employee')
 
 
 describe("Creates an Employee", () => {
