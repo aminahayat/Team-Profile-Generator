@@ -6,12 +6,11 @@ When prompted for team members and their information, then an HTML is generated 
 
 # Table of content
 * [Installation](#Installation)
-* Usage
-* License
-* Contributing
-* Tests
-* Technology used
-* Questions
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributers)
+* [Technology used](#technology)
+* [Questions](#questions)
 
 # Installation
 To install this application, clone the code into your terminal for the respective repository. Then, install npm by entering the command npm init into the terminal. Inquirer must then be installed by entering npm install inquirer. Finally, the program can then be run by entering node develop/index.js into the command line, and answering each question appropriately.
@@ -40,3 +39,4 @@ There are no other contributers.
 * Jest
 
 # Questions
+If you have any question, feel free to email me: hayat.amina@hotmail.com 
